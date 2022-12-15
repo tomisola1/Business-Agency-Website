@@ -37,3 +37,5 @@ video.addEventListener('timeupdate', () => {
         video.style.opacity = '.3'
     }
 })
+
+  
