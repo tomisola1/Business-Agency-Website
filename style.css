@@ -20,14 +20,14 @@ html {
 
 .section-heading {
     font-family: 'Oswald', sans-serif;
-    font-size: 6rem;
+    font-size: 10rem;
     font-weight: 300;
     color: #ddd;
     margin-right: 4rem;
 }
 
 .section-heading-line {
-    width: 10rem;
+    width: 15rem;
     height: 0.2rem;
     background-color: #ddd;
 }
@@ -308,13 +308,17 @@ html {
 }
 
 .video-wrapper {
-    width: 60rem;
-    height: 30rem;
+    width: 100rem;
+    height: 50rem;
     position: absolute;
     top: 5rem;
     right: 15rem;
     box-shadow: 3rem 3rem 3rem rgba(0, 0, 0, .7);
     overflow: hidden;
+}
+
+.video-wrapper:hover .controls {
+    transform: translateY(0);
 }
 
 .video {
@@ -332,10 +336,6 @@ html {
     background-color: rgba(0, 0, 0, .7);
     transform: translateY(calc(100% - 0.4rem));
     transition: transform .4s;
-}
-
-.video-wrapper:hover .controls {
-    transform: translateY(0);
 }
 
 .video-bar-wrapper {
@@ -365,38 +365,42 @@ html {
 }
 
 .buttons i {
+    width: 3rem;
+    height: 3rem;
     font-size: 2.8rem;
     color: #fff;
 }
 
 .section-2-paragraph {
-    width: 60rem;
+    width: 100rem;
     position: absolute;
     bottom: 8rem;
     right: 15rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 1.5;
     color: #ddd;
-    border-top: .3rem double #aaa;
-    border-bottom: .3rem double #aaa;
-    padding: 1rem;
+    border-top: 0.3rem double #aaa;
+    border-bottom: 0.3rem double #aaa;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: justify;
-    text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, .7);
-    line-height: 2.2rem;
+    text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.7);
 }
 
 .fa-quote-left {
     align-self: flex-start;
-    font-size: 4rem;
-    margin-bottom: 1rem;
+    font-size: 5rem;
+    color: #bbb;
+    margin-bottom: 2rem;
 }
 
 .fa-quote-right {
     align-self: flex-end;
-    font-size: 4rem;
+    font-size: 5rem;
+    color: #bbb;
 }
 /* End of section 2 */
 /* Section 3 */
@@ -416,8 +420,8 @@ html {
 }
 
 .pricing-card {
-    width: 20rem !important;
-    height: 45rem !important;
+    width: 23rem;
+    height: 45rem;
     background-color: #181b1d;
     border-radius: 1rem;
     box-shadow: 2rem 2rem 6rem rgba(0, 0, 0, .7);
@@ -656,9 +660,9 @@ html {
 
 .footer-nav a {
     font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #ccc;
-    margin-right: 3rem;
+    margin-right: 4rem;
     letter-spacing: .1rem;
     transition: color .3s;
 } 
@@ -672,3 +676,175 @@ html {
     color: #ddd;
 }
 /* End of footer */
+/* Responsive */
+@media (max-width: 1500px) {
+    .section-heading-line {
+        display: none;
+    }
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 45%;
+    }
+
+    .banner-heading {
+        font-size: 10rem;
+    }
+
+    .banner-paragraph {
+        width: 45rem;
+        font-size: 3rem;
+    }
+
+    .section-2,
+    .section-3,
+    .section-4 {
+        flex-direction: column;
+    }
+
+    .section-2 {
+        height: 120vh;
+    }
+
+    .video-wrapper {
+        width: 80rem;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-2-paragraph {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80rem;
+    }
+
+    .section-3 {
+        height: auto;
+        padding: 5rem 0 10rem 0;
+    }
+
+    .section-3 .section-heading {
+        margin-bottom: 7rem;
+    }
+
+    .section-4 {
+        height: auto;
+        padding: 5rem 0;
+    }
+}
+
+@media (max-width: 900px) {
+    html {
+        font-size: 40%;
+    }
+
+    .banner {
+        top: 25%;
+    }
+
+    .banner-heading {
+        height: 15rem;
+    }
+
+    .banner-heading span {
+        font-size: 8rem;
+    }
+
+    .footer {
+        padding: 0 5rem;
+    }
+
+    .footer-nav a{
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 35%;
+    }
+
+    .section-2 {
+        height: 100vh;
+    }
+
+    .pricing-cards-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .pricing-card {
+        margin: 2rem 4rem;
+    }
+
+    .contact-details div {
+        margin: 3rem 2rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-nav {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 30%;
+    }
+
+    .banner-heading span {
+        font-size: 4.5rem;
+        letter-spacing: 2rem;
+    }
+
+    @keyframes animateHeading {
+        0% {
+            transform: translateZ(8rem);
+            opacity: 0;
+            letter-spacing: 2rem;
+        }
+        3% {
+            transform: translateZ(0);
+            opacity: 1;
+            letter-spacing: 1rem;
+        }
+        25% {
+            transform: translateZ(0);
+            opacity: 1;
+            letter-spacing: 1rem;
+        }
+        28% {
+            transform: translateZ(8rem);
+            opacity: 0;
+            letter-spacing: 2rem;
+        }
+        100% {
+            transform: translateZ(8rem);
+            opacity: 0;
+            letter-spacing: 2rem;
+        }
+    }
+
+    .video-wrapper {
+        width: 60rem;
+    }
+
+    .section-2-paragraph {
+        width: 60rem;
+    }
+
+    .contact-details div {
+        width: 18rem;
+        margin: 3rem 1rem;
+    }
+
+    .contact-form {
+        width: 60rem;
+    }
+}
+/* End of Responsive */
